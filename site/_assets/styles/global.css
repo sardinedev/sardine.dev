@@ -1,0 +1,16 @@
+/** TAILWIND CSS **/
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/** GLOBAL CSS **/
+
+body {
+  background-color: var(--primary-color);
+  color: var(--base-color);
+}
+
+a {
+  color: var(--accent-color);
+}

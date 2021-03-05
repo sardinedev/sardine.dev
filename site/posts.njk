@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+content: true
+---
+<h2 class="container mx-auto max-w-xl">All my Posts!</h2>
+<section class="container mx-auto max-w-xl">
+{%- for post in collections.post -%}
+  {% include "components/card/card.njk" %}
+{%- endfor -%}
+</section>

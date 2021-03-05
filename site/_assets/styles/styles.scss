@@ -1,0 +1,8 @@
+@import "utilities";
+
+// You can share variables between SCSS and CSS
+:root {
+  --primary-color: #{$primary-color};
+  --accent-color: #{$accent-color};
+  --base-color: #{$base-color};
+}

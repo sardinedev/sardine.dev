@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/post/post.njk",
+  "permalink": "posts/{{ title | slug }}/index.html",
+  "tags": "post",
+  "changeFreq": "monthly",
+  "priority": "0.5"
+}

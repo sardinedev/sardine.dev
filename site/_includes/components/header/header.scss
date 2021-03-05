@@ -1,0 +1,42 @@
+@import "./../../../_assets/styles/utilities";
+
+.header {
+  li {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  svg {
+    fill: $base-color;
+  }
+}
+
+.navigation {
+  &--open {
+    ul {
+      background-color: $accent-color;
+      color: $primary-color;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+    }
+
+    li {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    svg {
+      fill: $primary-color;
+    }
+  }
+}
