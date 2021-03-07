@@ -1,31 +1,16 @@
-{% set menu_icon %}
-{% include "site/_assets/icons/menu.svg" %}
-{% endset %}
-{% set close_icon %}
-{% include "site/_assets/icons/close.svg" %}
-{% endset %}
-
 <style>
   {{"site/_includes/components/header/header.scss" | sass | safe}}
 </style>
 
 
 <header class="header flex container mx-auto justify-between p-4">
-  <h3>
-    <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-  </h3>
-  <nav id="header-nav">
-    <ul class="hidden lg:flex items-center">
-      <li><a href="{{ '/posts' | url }}">Blog</a></li>
-      <li><a href="{{ '/about' | url }}">About</a></li>
-    </ul>
-    <span id="menu-button" class="lg:hidden relative z-10 cursor-pointer">
-      {{menu_icon | safe}}
-    </span>
-    <span id="close-button" class="lg:hidden opacity-0 relative z-10 cursor-pointer">
-      {{close_icon | safe}}
-    </span>
-  </nav>
+  <a class="header__logo" href="{{ '/' | url }}">
+  <span class="relative block">
+  {% svg "sardine-bones" %}
+  {% svg "sardine-shape" %}
+  </span>
+  </section>
+  </a>
 </header>
 
 <script defer src="{{ 'site/_includes/components/header/header.ts' | rollup | safe }}"></script>

@@ -4,6 +4,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const htmlmin = require('./lib/html-minify.11ty');
 const dateFormat = require('./lib/date.11ty');
 const eleventyRollup = require('./lib/rollup.11ty');
+const svg = require('./lib/svg.11ty');
 
 module.exports = function (eleventyConfig) {
   // Input directory: src
@@ -22,4 +23,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addTransform('htmlmin', htmlmin);
 
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(svg, {
+    baseUrl: "site/_assets/svg/"
+  });
 };
